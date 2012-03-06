@@ -10,25 +10,25 @@ end
 
 
 describe "Creating a single token with #generate_tokens" do
-  it "sets the appropriate token property" do
-    tokened = WantsOneToken.new
+  let(:tokened) { WantsOneToken.new }
+  before do
     tokened.generate_tokens
+  end
+
+  it "sets the appropriate token property" do
     tokened.public_token.should_not be_nil
   end
 
   describe "the generated token" do
     it 'is unique' do
-      tokened1 = WantsOneToken.new
       tokened2 = WantsOneToken.new
-      tokened1.generate_tokens
       tokened2.generate_tokens
-      tokened1.public_token.should_not == tokened2.public_token
+      tokened.public_token.should_not == tokened2.public_token
     end
 
     it "has the length that was given" do
-      tokened = WantsOneToken.new
-      tokened.generate_tokens
       tokened.public_token.length.should == 5
     end
   end
 end
+
