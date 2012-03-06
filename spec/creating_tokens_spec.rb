@@ -32,3 +32,27 @@ describe "Creating a single token with #generate_tokens" do
   end
 end
 
+class WantsMultipleTokens
+  HasTokens.on self
+
+  attr_accessor :public_token, :admin_token
+
+  has_tokens :public => 5, :admin => 10
+end
+
+describe "Creating multiple tokens with #generate_tokens" do
+  let(:tokened) { WantsMultipleTokens.new }
+  before do
+    tokened.generate_tokens
+  end
+
+  it "sets all the token properties" do
+    tokened.public_token.should_not be_nil
+    tokened.admin_token.should_not be_nil
+  end
+
+  it "has the length that was given for each token" do
+    tokened.public_token.length.should == 5
+    tokened.admin_token.length.should == 10
+  end
+end
