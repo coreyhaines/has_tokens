@@ -55,4 +55,11 @@ describe "Creating multiple tokens with #generate_tokens" do
     tokened.public_token.length.should == 5
     tokened.admin_token.length.should == 10
   end
+
+  it "does not over-write an existing token" do
+    tokened = WantsMultipleTokens.new
+    tokened.admin_token = "existing"
+    tokened.generate_tokens
+    tokened.admin_token.should eq("existing")
+  end
 end

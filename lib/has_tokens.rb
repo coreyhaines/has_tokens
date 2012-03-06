@@ -24,6 +24,7 @@ module HasTokens
 
   def generate_tokens
     self.class.token_definitions.each do |token_name, size|
+      return if self.send("#{token_name}_token")
       self.send "#{token_name}_token=", (1..size).map{TokenChars.sample}.join
     end
   end
