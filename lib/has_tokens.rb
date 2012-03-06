@@ -10,14 +10,11 @@ module HasTokens
 
         def has_tokens(token_definitions)
           @token_definitions = token_definitions
-        end
-
-        def for_admin(token)
-          find_by_admin_token! token
-        end
-
-        def for_public(token)
-          find_by_public_token! token
+          token_definitions.keys.each do |token_name|
+            define_singleton_method "for_#{token_name}" do |token|
+              send "find_by_#{token_name}_token!", token
+            end
+          end
         end
       end
     end
