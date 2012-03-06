@@ -5,8 +5,8 @@ require "has_tokens/version"
 Gem::Specification.new do |s|
   s.name        = "has_tokens"
   s.version     = HasTokens::VERSION
-  s.authors     = ["coreyhaines"]
-  s.email       = ["coreyhaines@gmail.com"]
+  s.authors     = ["coreyhaines", "josh cheek"]
+  s.email       = ["coreyhaines@gmail.com", "josh.cheek@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Creates tokens for accessing ActiveRecord objects}
   s.description = %q{Allows you to declaratively specify token-based access for your ActiveRecord objects.}
