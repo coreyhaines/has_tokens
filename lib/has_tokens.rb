@@ -1,4 +1,5 @@
 require "has_tokens/version"
+require 'securerandom'
 
 module HasTokens
 
@@ -20,12 +21,10 @@ module HasTokens
     end
   end
 
-  TokenChars = (1..9).to_a + ('a'..'z').to_a
-
   def generate_tokens
     self.class.token_definitions.each do |token_name, size|
       return if self.send("#{token_name}_token")
-      self.send "#{token_name}_token=", (1..size).map{TokenChars.sample}.join
+      self.send "#{token_name}_token=", SecureRandom.hex(size)[0...size]
     end
   end
 end
