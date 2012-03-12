@@ -67,4 +67,4 @@ coreyhaines and josh cheek
 License
 -------
 
-[Please see License.txt](https://github.com/coreyhaines/has_tokens/blob/master/License.txt)
+Please see [License.txt](https://github.com/coreyhaines/has_tokens/blob/master/License.txt)
