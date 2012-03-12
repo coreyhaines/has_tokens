@@ -3,7 +3,7 @@ has_tokens
 
 Creates tokens for accessing ActiveRecord objects. Allows you to declaratively specify token-based access for your ActiveRecord objects.
 
-Under the covers, has_tokens uses SecureRandom.hex so they'll be all "c07a2". The size is configurable, so if you need trillions, you can make that happen, man.
+Under the covers, has_tokens uses SecureRandom.hex so they'll be all "c07a2". The size is configurable, so if you need a token that is trillions of characters long, you can make that happen, man.
 
 Install
 -------
