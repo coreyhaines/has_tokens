@@ -1,4 +1,7 @@
-has_tokens
+[![Build Status](https://travis-ci.org/coreyhaines/has_tokens.svg?branch=master)](https://travis-ci.org/coreyhaines/has_tokens)
+[![Code Climate](https://codeclimate.com/github/coreyhaines/has_tokens/badges/gpa.svg)](https://codeclimate.com/github/coreyhaines/has_tokens)
+
+Has Tokens
 ==========
 
 Creates tokens for accessing ActiveRecord objects. Allows you to declaratively specify token-based access for your ActiveRecord objects.
