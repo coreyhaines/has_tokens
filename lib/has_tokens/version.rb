@@ -1,3 +1,3 @@
 module HasTokens
-  VERSION = "1.0.1"
+  VERSION = "3.27.0"
 end
