@@ -65,9 +65,9 @@ You know, or whatever.
 Authors
 -------
 
-coreyhaines and josh cheek
+[Corey Haines](https://github.com/coreyhaines) and [Josh Cheek](https://github.com/joshcheek)
 
 License
 -------
 
-Please see [License.txt](https://github.com/coreyhaines/has_tokens/blob/master/License.txt)
+Please see [License.txt](/License.txt)
