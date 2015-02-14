@@ -7,9 +7,10 @@ Gem::Specification.new do |s|
   s.version     = HasTokens::VERSION
   s.authors     = ["coreyhaines", "josh cheek"]
   s.email       = ["coreyhaines@gmail.com", "josh.cheek@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/coreyhaines/has_tokens"
   s.summary     = %q{Creates tokens for accessing ActiveRecord objects}
   s.description = %q{Allows you to declaratively specify token-based access for your ActiveRecord objects.}
+  s.license     = "MIT"
 
   s.rubyforge_project = "has_tokens"
 
